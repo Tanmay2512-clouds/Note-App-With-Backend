@@ -9,8 +9,6 @@ app.use(express.json())
 const upload = multer({storage:multer.memoryStorage()})
 
 app.post('/create-post',upload.single("image"),async(req,res)=>{
-    console.log(req.body);
-    console.log(req.file);
 
     const result = await uploadFile(req.file.buffer)
 
@@ -20,8 +18,11 @@ app.post('/create-post',upload.single("image"),async(req,res)=>{
     })
 
     return res.status(201).json({
-        message:"Post Created Successfully"
+        message:"Post Created Successfully",
+        post
     })
 })
+
+app.get()
 
 module.exports = app;

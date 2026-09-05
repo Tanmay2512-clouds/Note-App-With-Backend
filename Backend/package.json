@@ -2,8 +2,10 @@
   "name": "note-app-with-backend",
   "version": "1.0.0",
   "description": "A backend foundation for a note-taking application, built around a small REST API and MongoDB persistence.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

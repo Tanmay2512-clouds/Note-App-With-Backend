@@ -23,6 +23,4 @@ app.post('/create-post',upload.single("image"),async(req,res)=>{
     })
 })
 
-app.get()
-
 module.exports = app;
